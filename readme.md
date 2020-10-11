@@ -9,7 +9,7 @@ The intended audience for this page will know what to adjust to get another type
 
 ## Contents
 
-- [Pre-requisite Setup](#heading)
+- [Pre-requisite Setup](#Pre-requisite-Setup)
   * [Environment Variables](#sub-heading)
   * [Configuration of Visual Studio Code](#sub-heading-1)
 - [Project Setup](#heading-1)
