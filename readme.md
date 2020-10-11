@@ -93,7 +93,25 @@ After these steps, all dependencies will be downloaded to your current directory
 
 1. Open a command prompt.
 2. Type **`mbed new THIS_IS_YOUR_APP_NAME`** and run.
-4. Create a **`main.cpp file`** in your root application directory. Open the file and add the following codes:
+4. Create a **`main.cpp file`** in your root of the application. Open the file and add the following codes:
+
+```cpp
+#include "mbed.h"
+
+int main()
+{
+    // Initialise the digital pin LED1 as an output
+    DigitalOut led(LED1);
+
+    while (true)
+    {
+        led = !led;
+        wait_us(1000000);
+    }
+}
+```
+
+4. Open **`mbed_app.json`** in the root of the application and replace it with the following content:
 
 ```json
 {
