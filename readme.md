@@ -137,4 +137,7 @@ int main()
 | `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
 | `OPENOCD_PATH` | The path of OpenOCD compiler, for example: **`C:/VSARM/openocd`**. |
-       
+
+## Compile And Test
+
+Press **`F5`** to build the code and **`F6`** to program the target device (don't forget to connect your development board). If all went well, the on-board LED should now be blinking, sometimes slow, sometimes fast.
