@@ -51,7 +51,7 @@ The following software is needed. Before all installations, create the folder `C
     - `C/C++`
     - `Cortex Debug`
 
-3. Press **`F1`** and type **`Open Settings (JSON)`**. Open the user settings .JSON file and add the following:
+3. Press **`F1`** and type **`Open Settings (JSON)`**. Open the user settings .JSON file and add the following codes:
 
 ```json
 // Place your key bindings in this file to override the defaults
@@ -60,7 +60,7 @@ The following software is needed. Before all installations, create the folder `C
 }
 ```
 
-Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load Firmware (Debug)`** commands. Press **`F1`** and type **`Open Keyboard Shortcuts (JSON)`**. Open the keyboard shortcuts .JSON file and add the following:
+Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load Firmware (Debug)`** commands. Press **`F1`** and type **`Open Keyboard Shortcuts (JSON)`**. Open the keyboard shortcuts .JSON file and add the following codes:
 
 ```json
 // Place your key bindings in this file to override the defaults
@@ -80,11 +80,28 @@ Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load F
 
 ### Project Setup
 
-The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project.
+The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project. Then, you can easily disconnect your machine from the internet.
 
 ### Automatic Setup
 
 1. Open a command prompt.
-2. Type `git clone https://github.com/vberkaltun/mbedCore.git`.
+2. Type **`git clone https://github.com/vberkaltun/mbedCore.git`**.
+
+After these steps, all dependencies will be downloaded to your current directory.
 
 ### Manual Setup
+
+1. Open a command prompt.
+2. Type **`mbed new THIS_IS_YOUR_APP_NAME`** and run.
+4. Create a **`main.cpp file`** in your root application directory. Open the file and add the following codes:
+
+```json
+{
+    "requires": ["bare-metal"],
+    "target_overrides": {
+        "*": {
+            "target.c_lib": "small"
+        }
+    }
+}
+```
