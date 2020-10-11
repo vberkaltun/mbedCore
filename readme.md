@@ -129,10 +129,26 @@ int main()
 1. Open the **`.vscode/settings.json`** file of the application.
 2. Update the values of given parameters based on your installations:
 
-    - `PROJECT_PATH` : The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**.
-    - `DEVELOPMENT_BOARD_NAME` : The development board name, for example: **`NUCLEO_F446RE`**. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application.
-    - `DEVELOPMENT_TOOLCHAIN` : The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application.
+    - `PROJECT_PATH`
+    
+       The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**.
+    
+    - `DEVELOPMENT_BOARD_NAME`
+    
+       The development board name, for example: **`NUCLEO_F446RE`**.
+       For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application.
+       
+    - `DEVELOPMENT_TOOLCHAIN`
+    
+       The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler.
+       For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application.
+       
     - `COMPILE_MEMORY_ADDRESS`
-    - `ARM_PATH` : The path of arm compiler, for example: **`C:/VSARM/armgcc`**. This documentation is totaly based on GCC_ARM compiler.
-    - `OPENOCD_PATH` : The path of arm compiler, for example: **`C:/VSARM/openocd`**. This documentation is totaly based on GCC_ARM compiler.
-
+    
+    - `ARM_PATH`
+    
+       The path of arm compiler, for example: **`C:/VSARM/armgcc`**.
+       
+    - `OPENOCD_PATH`
+    
+       The path of arm compiler, for example: **`C:/VSARM/openocd`**.
