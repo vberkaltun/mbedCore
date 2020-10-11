@@ -48,12 +48,18 @@ The following software is needed. Before all installations, create the folder `C
 1. Open Visual Studio Code.
 2. Press `Ctrl-Shift-X` to open the Extension tab and install the following extensions:
 
-    - **`C/C++`**
-    - **`Cortex Debug`**
+    - `C/C++`
+    - `Cortex Debug`
 
 3. Press `F1` and type `Open Settings (JSON)`. Open the user settings .JSON file and add the following:
-    - **`"cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\",`**
-    
+
+```json
+// Place your key bindings in this file to override the defaults
+{
+    "cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\"
+}
+```
+
 Next, add keyboard shortcuts to the `Compile Firmware (Debug)` and `Load Firmware (Debug)` commands. Press `F1` and type `Open Keyboard Shortcuts (JSON)`. Open the keyboard shortcuts .JSON file and add the following:
 
 ```json
