@@ -52,4 +52,4 @@ The following software is needed. Before all installations, create the folder `C
     - `Cortex Debug`
 
 3. Press `F1` and type `Open Settings (JSON)`. Open the user settings .JSON file and add the following:
-    - `"cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\",`
+    - `"cortex-debug.armToolchainPath": `**`"${env:VSARM}\\armcc\\bin\\"`**`,`
