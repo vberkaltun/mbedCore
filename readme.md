@@ -5,7 +5,7 @@ then adjusted to fit Hukseflux needs.
 This will allow you to develop firmware using either a NUCLEO development board, or a ST-Link programmer. For this description, the use of a STM32F446RE NUCLEO board is assumed. 
 The intended audience for this page will know what to adjust to get another type of target device up-and-running.
 
-### Contents
+## Contents
 
 - Pre-requisite Setup
     - Environment Variables
@@ -16,7 +16,7 @@ The intended audience for this page will know what to adjust to get another type
 - Post-requisite Setup
 - Compile And Test
 
-### Pre-requisite Setup
+## Pre-requisite Setup
 
 The following software is needed. Before all installations, create the folder `C:\VSARM` and then start the installations:
 
@@ -31,7 +31,7 @@ The following software is needed. Before all installations, create the folder `C
 | [ST-LINK USB driver](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html) | v2.0.1 | `NA` | `NA` |
 | [Visual Studio Code](https://code.visualstudio.com/) | v1.50.0 | `NA` |  Download the system installer, not the user installer. |
 
-#### Environment Variables
+### Environment Variables
 
 1. Open Windows **Control Panel** and navigate to **System** (Control Panel->System and Security->System).
 2. After the **System** screen appears, select **Advanced system settings**.
@@ -43,7 +43,7 @@ The following software is needed. Before all installations, create the folder `C
     - `C:\VSARM\openocd\bin`
     - `C:\VSARM\armcc\bin`
 
-#### Configuration of Visual Studio Code
+### Configuration of Visual Studio Code
 
 1. Open Visual Studio Code.
 2. Press **`Ctrl-Shift-X`** to open the Extension tab and install the following extensions:
@@ -78,18 +78,18 @@ Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load F
 ]
 ```
 
-### Project Setup
+## Project Setup
 
 The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project. Then, you can easily disconnect your machine from the internet.
 
-#### Automatic Setup
+### Automatic Setup
 
 1. Open a command prompt.
 2. Type **`git clone https://github.com/vberkaltun/mbedCore.git`**.
 
 After these steps, all dependencies will be downloaded to your current directory.
 
-#### Manual Setup
+### Manual Setup
 
 1. Open a command prompt.
 2. Type **`mbed new THIS_IS_YOUR_APP_NAME`** and run.
@@ -123,3 +123,16 @@ int main()
     }
 }
 ```
+
+## Post-requisite Setup
+
+1. Open the **`.vscode/settings.json`** file of the application.
+2. Update the values of given parameters based on your installations:
+
+    - `PROJECT_PATH` : The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**.
+    - `DEVELOPMENT_BOARD_NAME` : The development board name, for example: **`NUCLEO_F446RE`**. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application.
+    - `DEVELOPMENT_TOOLCHAIN` : The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application.
+    - `COMPILE_MEMORY_ADDRESS`
+    - `ARM_PATH` : The path of arm compiler, for example: **`C:/VSARM/armgcc`**. This documentation is totaly based on GCC_ARM compiler.
+    - `OPENOCD_PATH` : The path of arm compiler, for example: **`C:/VSARM/openocd`**. This documentation is totaly based on GCC_ARM compiler.
+
