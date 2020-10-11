@@ -9,9 +9,10 @@ The intended audience for this page will know what to adjust to get another type
 
 - Pre-requisite Setup
     - Environment Variables
-    - Extension Setup
-    - Keyboard Shortcuts Setup
+    - Configuration of Visual Studio Code
 - Project Setup
+    - Download Sourcode
+    - Update Settings Variables
 - Post-requisite Setup
 - Compile And Test
 
@@ -41,3 +42,14 @@ The following software is needed. Before all installations, create the folder `C
     - `C:\VSARM\stlink\bin`
     - `C:\VSARM\openocd\bin`
     - `C:\VSARM\armcc\bin`
+
+#### Configuration of Visual Studio Code
+
+1. Open Visual Studio Code.
+2. `Press Ctrl-Shift-X` to open the Extension tab and install the following extensions:
+
+    - `C/C++`
+    - `Cortex Debug`
+
+3. Press `F1` and type `Open Settings (JSON)`. Open the user settings .JSON file and add the following:
+    - `"cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\",`
