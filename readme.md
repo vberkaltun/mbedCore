@@ -32,10 +32,11 @@ The following software is needed. Before all installations, create the folder `C
 
 #### Environment Variables
 
-Open Environment Variables
-Add a User Variable: VSARM and point it to C:\VSARM
-Add the following paths to the Path variable:
-C:\VSARM\stlink\bin
-C:\VSARM\openocd\bin
-C:\VSARM\armcc\bin
-C:\VSARM\mingw\mingw32
+1. Open Windows **Control Panel** and navigate to **System** (Control Panel->System and Security->System).
+2. After the **System** screen appears, select **Advanced system settings**.
+3. This will open the **System Properties** window. Select the **Advanced** tab and then the **Environment Variables** button.
+4. Under the **System variables** section, scroll down and highlight the **Path** variable. Click the **Edit** button.
+5. In the Edit screen, click **New** and add the path to:
+    - `C:\VSARM\stlink\bin`
+    - `C:\VSARM\openocd\bin`
+    - `C:\VSARM\armcc\bin`
