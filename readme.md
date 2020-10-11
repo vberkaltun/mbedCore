@@ -62,12 +62,12 @@ Next, add keyboard shortcuts to the `Compile Firmware (Debug)` and `Load Firmwar
     {
         "key": "f5",
         "command": "workbench.action.tasks.runTask",
-        "args": "Make Firmware"
+        "args": "Compile Firmware (Debug)"
     },
     {
         "key": "f6",
         "command": "workbench.action.tasks.runTask",
-        "args": "Load Firmware"
-    }    
+        "args": "Load Firmware (Debug)"
+    }
 ]
 ```
