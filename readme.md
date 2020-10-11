@@ -39,20 +39,35 @@ The following software is needed. Before all installations, create the folder `C
 4. Under the **System variables** section, scroll down and highlight the **Path** variable. Click the **Edit** button.
 5. In the Edit screen, click **New** and add the path to:
 
-    - `C:\VSARM\stlink\bin`
-    - `C:\VSARM\openocd\bin`
-    - `C:\VSARM\armcc\bin`
+    - **`C:\VSARM\stlink\bin`**
+    - **`C:\VSARM\openocd\bin`**
+    - **`C:\VSARM\armcc\bin`**
 
 #### Configuration of Visual Studio Code
 
 1. Open Visual Studio Code.
-2. Press **`Ctrl-Shift-X`** to open the Extension tab and install the following extensions:
+2. Press `Ctrl-Shift-X` to open the Extension tab and install the following extensions:
 
-    - `C/C++`
-    - `Cortex Debug`
+    - **`C/C++`**
+    - **`Cortex Debug`**
 
-3. Press **`F1`** and type **`Open Settings (JSON)`**. Open the user settings .JSON file and add the following:
-    - `"cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\",`
+3. Press `F1` and type `Open Settings (JSON)`. Open the user settings .JSON file and add the following:
+    - **`"cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\",`**
     
-Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load Firmware (Debug)`** commands. Press **`F1`** and type **`Open Keyboard Shortcuts (JSON)`**. Open the keyboard shortcuts .JSON file and add the following:
+Next, add keyboard shortcuts to the `Compile Firmware (Debug)` and `Load Firmware (Debug)` commands. Press `F1` and type `Open Keyboard Shortcuts (JSON)`. Open the keyboard shortcuts .JSON file and add the following:
 
+```json
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Make Firmware"
+    },
+    {
+        "key": "f6",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Load Firmware"
+    }    
+]
+```
