@@ -7,14 +7,14 @@ The intended audience for this page will know what to adjust to get another type
 
 ## Contents
 
-- Pre-requisite Setup
-    - Environment Variables
-    - Configuration of Visual Studio Code
-- Project Setup
-    - Automatic Setup
-    - Manual Setup
-- Post-requisite Setup
-- Compile And Test
+- [Pre-requisite Setup](#heading)
+  * [Environment Variables](#sub-heading)
+  * [Configuration of Visual Studio Code](#sub-heading-1)
+- [Project Setup](#heading-1)
+  * [Automatic Setup](#sub-heading-2)
+  * [Manual Setup](#sub-heading-3)
+- [Post-requisite Setup](#heading-2)
+- [Compile And Test](#heading-3)
 
 ## Pre-requisite Setup
 
