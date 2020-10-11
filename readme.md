@@ -10,13 +10,13 @@ The intended audience for this page will know what to adjust to get another type
 ## Contents
 
 - [Pre-requisite Setup](#Pre-requisite-Setup)
-  * [Environment Variables](#sub-heading)
-  * [Configuration of Visual Studio Code](#sub-heading-1)
-- [Project Setup](#heading-1)
-  * [Automatic Setup](#sub-heading-2)
-  * [Manual Setup](#sub-heading-3)
-- [Post-requisite Setup](#heading-2)
-- [Compile And Test](#heading-3)
+  * [Environment Variables](#Environment-Variables)
+  * [Configuration of Visual Studio Code](#Configuration-of-Visual-Studio-Code)
+- [Project Setup](#Project-Setup)
+  * [Automatic Setup](#Automatic-Setup)
+  * [Manual Setup](#Manual-Setup)
+- [Post-requisite Setup](#Post-requisite-Setup)
+- [Compile And Test](#Compile-And-Test)
 
 ## Pre-requisite Setup
 
