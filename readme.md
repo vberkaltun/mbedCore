@@ -134,7 +134,7 @@ int main()
 | `PROJECT_PATH` | The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**. |
 | `DEVELOPMENT_BOARD_NAME` |The development board name, for example: **`NUCLEO_F446RE`**. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application. |
 | `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application. |
-| `COMPILE_MEMORY_ADDRESS` | The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**. |
+| `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
 | `OPENOCD_PATH` | The path of OpenOCD compiler, for example: **`C:/VSARM/openocd`**. |
        
