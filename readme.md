@@ -26,7 +26,7 @@ The following software is needed. Before all installations, create the folder `C
 | [Git](https://git-scm.com/download/win) | v2.28.0 | `C:\VSARM\git` |
 | [Python 2](https://www.python.org/downloads/windows/) | v1.10.4 | `C:\VSARM\python27` |
 | [STMicroelectronics STlink Tools](https://github.com/stlink-org/stlink/releases/tag/v1.6.1) | v1.6.1 | `C:\VSARM\stlink` |
-| [Mbed-CLI](https://pypi.org/project/mbed-cli/#:~:text=Mbed%20CLI%20is%20a%20Python,to%20install%20Mercurial%20and%20Git.) | v2.7.18 | Run `pip install mbed-cli ` in command prompt |
+| [Mbed-CLI](https://pypi.org/project/mbed-cli/#:~:text=Mbed%20CLI%20is%20a%20Python,to%20install%20Mercurial%20and%20Git.) | v2.7.18 | Run `pip install mbed-cli` in command prompt |
 | [ST-LINK, ST-LINK/V2, ST-LINK/V2-1 USB driver](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html) | v2.0.1 | `NA` |
 | [Visual Studio Code](https://code.visualstudio.com/) | v1.50.0 | `NA` |
 
