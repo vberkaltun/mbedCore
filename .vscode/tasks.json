@@ -1,0 +1,87 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Firmware (Debug)",
+            "type": "shell",
+            "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile debug",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }, 
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+               "owner": "cpp",
+               "fileLocation": ["relative", "${workspaceFolder}"],
+               "pattern": {
+                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                   "file": 1,
+                   "line": 2,
+                   "column": 3,
+                   "severity": 4,
+                   "message": 5
+               }
+            }
+        },
+        {
+            "label": "Compile Firmware (Release)",
+            "type": "shell",
+            "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile release",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }, 
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+               "owner": "cpp",
+               "fileLocation": ["relative", "${workspaceFolder}"],
+               "pattern": {
+                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                   "file": 1,
+                   "line": 2,
+                   "column": 3,
+                   "severity": 4,
+                   "message": 5
+               }
+            }
+        },
+        {
+            "label": "Load Firmware (Debug)",
+            "type": "shell",
+            "command": "st-flash --reset write ${config:COMPILE_DEBUG_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Make Debug Firmware"
+            ]
+        },
+        {
+            "label": "Load Firmware (Release)",
+            "type": "shell",
+            "command": "st-flash --reset write ${config:COMPILE_RELEASE_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Make Release Firmware"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "C_Cpp.addWorkspaceRootToIncludePath": false,
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "git.ignoreLimitWarning": true,
+    
+    "PROJECT_NAME": "example",
+    "PROJECT_PATH": "C:/example",
+
+    "DEVELOPMENT_BOARD_NAME": "NUCLEO_F446RE",
+    "DEVELOPMENT_TOOLCHAIN": "GCC_ARM",
+    
+    "COMPILE_MEMORY_ADDRESS": "0x08000000",
+    "COMPILE_RELEASE_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM",
+    "COMPILE_DEBUG_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM-DEBUG",
+
+    "ARM_PATH": "C:/VSARM/armgcc",
+    "ARM_PATH_EXEC_FILENAME": "${config:ARM_PATH}/bin/arm-none-eabi-gdb.exe",
+
+    "OPENOCD_PATH": "C:/VSARM/openocd",
+    "OPENOCD_EXEC_FILENAME": "${config:OPENOCD_PATH}/bin/openocd.exe",
+    "OPENOCD_CONFIG_FILENAME": "${config:OPENOCD_PATH}/scripts/board/st_nucleo_f4.cfg",
+    "OPENOCD_INTERFACE_FILENAME": "${config:OPENOCD_PATH}/scripts/interface/stlink-v2-1.cfg",
+}
