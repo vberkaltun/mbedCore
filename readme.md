@@ -5,6 +5,8 @@ then adjusted to fit Hukseflux needs.
 This will allow you to develop firmware using either a NUCLEO development board, or a ST-Link programmer. For this description, the use of a STM32F446RE NUCLEO board is assumed. 
 The intended audience for this page will know what to adjust to get another type of target device up-and-running.
 
+<!-- toc -->
+
 ## Contents
 
 - [Pre-requisite Setup](#heading)
