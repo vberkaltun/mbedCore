@@ -82,14 +82,14 @@ Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load F
 
 The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project. Then, you can easily disconnect your machine from the internet.
 
-### Automatic Setup
+#### Automatic Setup
 
 1. Open a command prompt.
 2. Type **`git clone https://github.com/vberkaltun/mbedCore.git`**.
 
 After these steps, all dependencies will be downloaded to your current directory.
 
-### Manual Setup
+#### Manual Setup
 
 1. Open a command prompt.
 2. Type **`mbed new THIS_IS_YOUR_APP_NAME`** and run.
