@@ -126,7 +126,7 @@ int main()
 
 ## Post-requisite Setup
 
-1. Open the **`.vscode/settings.json`** file of the application.
+1. Open the **`.vscode/settings.json`** file in the application folder.
 2. Update the values of given parameters based on your installations:
 
 | Tables         | Description  |
