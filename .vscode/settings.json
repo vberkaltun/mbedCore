@@ -4,8 +4,8 @@
     "C_Cpp.intelliSenseEngine": "Tag Parser",
     "git.ignoreLimitWarning": true,
     
+    "PROJECT_PATH": "C:/Users/Dekimo/Documents/GitHub/mbedCore",
     "PROJECT_NAME": "${workspaceFolderBasename}",
-    "PROJECT_PATH": "${workspaceFolder}",
 
     "DEVELOPMENT_BOARD_NAME": "NUCLEO_F446RE",
     "DEVELOPMENT_TOOLCHAIN": "GCC_ARM",
