@@ -132,6 +132,181 @@ int main()
 }
 ```
 
+5. Create a **`.vscode`** folder in the root of your application and then create these three files in this folder:
+
+    - `.vscode\launch.json`
+    - `.vscode\settings.json`
+    - `.vscode\tasks.json`
+    
+6. Add the following content to the **`.vscode\launch.json`** file:
+
+```json
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Mbed Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${config:COMPILE_DEBUG_PATH}/${config:PROJECT_NAME}.elf",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${config:PROJECT_PATH}",
+            "environment": [],
+            "externalConsole": false,
+            "serverLaunchTimeout": 20000,
+            "filterStderr": true,
+            "filterStdout": false,
+            "serverStarted": "target halted due to debug-request, current mode: Thread",
+            "logging": {
+                "moduleLoad": true,
+                "trace": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "exceptions": true
+            },
+            "windows": {
+                "preLaunchTask": "Load Firmware (Debug)",
+                "MIMode": "gdb",
+                "MIDebuggerPath": "${config:ARM_PATH_EXEC_FILENAME}",
+                "debugServerArgs": "-f ${config:OPENOCD_CONFIG_FILENAME} -f ${config:OPENOCD_INTERFACE_FILENAME} -c init -c \"reset init\"",
+                "debugServerPath": "${config:OPENOCD_EXEC_FILENAME}",
+                "setupCommands": [
+                    { "text": "-target-select remote localhost:3333", "description": "connect to target", "ignoreFailures": false },
+                    { "text": "-file-exec-and-symbols ${config:COMPILE_DEBUG_PATH}/${config:PROJECT_NAME}.elf", "description": "load file", "ignoreFailures": false},
+                    { "text": "-interpreter-exec console \"monitor endian little\"", "ignoreFailures": false },
+                    { "text": "-interpreter-exec console \"monitor reset\"", "ignoreFailures": false },
+                    { "text": "-interpreter-exec console \"monitor halt\"", "ignoreFailures": false },
+                    { "text": "-interpreter-exec console \"monitor arm semihosting enable\"", "ignoreFailures": false },
+                    { "text": "-target-download", "description": "flash target", "ignoreFailures": false }
+                ]
+            }
+        }
+    ]
+}
+```
+
+7. Add the following content to the **`.vscode\settings.json`** file:
+
+```json
+// Place your settings in this file to overwrite default and user settings.
+{
+    "C_Cpp.addWorkspaceRootToIncludePath": false,
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "git.ignoreLimitWarning": true,
+    
+    "PROJECT_PATH": "C:/Users/Dekimo/Documents/GitHub/mbedCore",
+    "PROJECT_NAME": "${workspaceFolderBasename}",
+
+    "DEVELOPMENT_BOARD_NAME": "NUCLEO_F446RE",
+    "DEVELOPMENT_TOOLCHAIN": "GCC_ARM",
+    
+    "COMPILE_MEMORY_ADDRESS": "0x08000000",
+    "COMPILE_RELEASE_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM",
+    "COMPILE_DEBUG_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM-DEBUG",
+
+    "ARM_PATH": "C:/VSARM/armgcc",
+    "ARM_PATH_EXEC_FILENAME": "${config:ARM_PATH}/bin/arm-none-eabi-gdb.exe",
+
+    "OPENOCD_PATH": "C:/VSARM/openocd",
+    "OPENOCD_EXEC_FILENAME": "${config:OPENOCD_PATH}/bin/openocd.exe",
+    "OPENOCD_CONFIG_FILENAME": "${config:OPENOCD_PATH}/scripts/board/st_nucleo_f4.cfg",
+    "OPENOCD_INTERFACE_FILENAME": "${config:OPENOCD_PATH}/scripts/interface/stlink-v2-1.cfg",
+}
+```
+
+8. Add the following content to the **`.vscode\tasks.json`** file:
+
+```json
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Firmware (Debug)",
+            "type": "shell",
+            "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile debug",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }, 
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+               "owner": "cpp",
+               "fileLocation": ["relative", "${workspaceFolder}"],
+               "pattern": {
+                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                   "file": 1,
+                   "line": 2,
+                   "column": 3,
+                   "severity": 4,
+                   "message": 5
+               }
+            }
+        },
+        {
+            "label": "Compile Firmware (Release)",
+            "type": "shell",
+            "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile release",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }, 
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+               "owner": "cpp",
+               "fileLocation": ["relative", "${workspaceFolder}"],
+               "pattern": {
+                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                   "file": 1,
+                   "line": 2,
+                   "column": 3,
+                   "severity": 4,
+                   "message": 5
+               }
+            }
+        },
+        {
+            "label": "Load Firmware (Debug)",
+            "type": "shell",
+            "command": "st-flash --reset write ${config:COMPILE_DEBUG_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Make Debug Firmware"
+            ]
+        },
+        {
+            "label": "Load Firmware (Release)",
+            "type": "shell",
+            "command": "st-flash --reset write ${config:COMPILE_RELEASE_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Make Release Firmware"
+            ]
+        }
+    ]
+}
+```
+    
 ## Post-requisite Setup
 
 1. Open the **`.vscode/settings.json`** file in the application folder.
