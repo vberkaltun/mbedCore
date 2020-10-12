@@ -18,6 +18,8 @@ The intended audience for this page will know what to adjust to get another type
 - [Post-requisite Setup](#Post-requisite-Setup)
 - [Compile And Test](#Compile-And-Test)
 - [Troubleshooting](#Troubleshooting)
+  * [GDBDebugger: Usage Directory Error](#GDBDebugger:-Usage-Directory-Error)
+  * [Mbed-CLI: Configs](#Mbed-CLI:-Configs)
 - [Resources](#Resources)
 
 ## Pre-requisite Setup
@@ -152,6 +154,13 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 
 ## Troubleshooting
 
+### GDBDebugger: Usage Directory Error
+
+```
+kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output:  "^error,msg="-environment-cd: Usage DIRECTORY""
+```
+This error occurs when you use Unicode in your project path. The only workaround is to not include Unicode in your path. For more information, check out the [[Working directory and debug mode](#Resources)
+
 ## Resources
 
 1. [Exporting to Makefile fails to build on Windows](https://github.com/ARMmbed/mbed-os/issues/6335)
@@ -163,6 +172,8 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 7. [Docs › Tutorials › Debugging › Visual Studio Code](https://os.mbed.com/docs/mbed-os/v5.12/tutorials/visual-studio-code.html)
 8. [Docs › Tools › Debugging › Setting up a local debug toolchain](https://os.mbed.com/docs/mbed-os/v5.12/tools/setting-up-a-local-debug-toolchain.html)
 9. [DISCO_F413ZH debugging with OpenOCD and Visual Studio Code](https://gist.github.com/janjongboom/51f2edbee8c965741465fa5feefe4cf1)
+10. [CWD is badly encoded to GDB and fails to find directory if it has a diacritic.](https://github.com/microsoft/vscode-cpptools/issues/3444)
+11. [Working directory and debug mode](https://forum.kde.org/viewtopic.php?f=218&t=122931)
 
 ## License
 
