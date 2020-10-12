@@ -19,7 +19,7 @@ The intended audience for this page will know what to adjust to get another type
 - [Compile And Test](#Compile-And-Test)
 - [Troubleshooting](#Troubleshooting)
   * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-(GDBDebugger))
-  * [Mbed-CLI: Configs](#Mbed-CLI:-Configs)
+  * [Configs (Mbed-CLI)](#Configs-(Mbed-CLI))
 - [Resources](#Resources)
 
 ## Pre-requisite Setup
@@ -159,7 +159,10 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 ```
 kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output:  "^error,msg="-environment-cd: Usage DIRECTORY""
 ```
-This error occurs when you use Unicode in your project path. The only workaround is to not include Unicode in your path. For more information, check out the [Working directory and debug mode](#Resources)
+
+This error occurs when you use Unicode in your project path. The only workaround is to not include Unicode in your path. For more information, check out the [Working directory and debug mode](#Resources).
+
+### Configs (Mbed-CLI)
 
 ## Resources
 
