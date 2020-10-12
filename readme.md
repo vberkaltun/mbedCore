@@ -139,8 +139,8 @@ int main()
 | Tables         | Description  |
 | :------------- | :----------- |
 | `PROJECT_PATH` | The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**. |
-| `DEVELOPMENT_BOARD_NAME` |The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](#Version-Check) section. |
-| `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For more information, check out the [Configs (Mbed-CLI)](#Version-Check) section. |
+| `DEVELOPMENT_BOARD_NAME` |The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
+| `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
 | `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The root path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
 | `ARM_PATH_EXEC_FILENAME` | The executable filepath of the ARM compiler, for example: **`${config:ARM_PATH}/bin/arm-none-eabi-gdb.exe`**. |
