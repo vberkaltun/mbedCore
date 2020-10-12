@@ -29,7 +29,7 @@ The intended audience for this page will know what to adjust to get another type
 The following software is needed. Before all installations, create the folder `C:\VSARM` and then start the installations:
 
 | Software       | Version | Installation Path | Description |
-| :------------- | -------:| -----------------:| -----------:|
+| :------------- | :-------| :-----------------| :-----------|
 | [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) | v8.2.1 | `C:\VSARM\armgcc` | Download the Windows 32-bit installer for Windows 7 and later. |
 | [OpenOCD](https://freddiechopin.info/en/download/category/4-openocd) | v0.10.0 | `C:\VSARM\openocd` | `NA` |
 | [Git](https://git-scm.com/download/win) | v2.28.0 | `C:\VSARM\git` | `NA` |
@@ -161,7 +161,7 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 If you already have an installed version of the required software, you can check out the versions of them with the given commands. Open a command prompt and run each of them one-by-one:
 
 | Software       | Command |
-| :------------- | -------:|
+| :------------- | :-------|
 | GNU Arm Embedded Toolchain | `arm-none-eabi-gcc --version` |
 | OpenOCD | `openocd --version` |
 | Git | `git --version`|
