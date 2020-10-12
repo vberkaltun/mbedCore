@@ -93,7 +93,7 @@ The project can be set up in two different ways: automatic and manual. In both w
 ### Automatic Setup
 
 1. Open a command prompt.
-2. Type **`git clone https://github.com/vberkaltun/mbedCore.git`**.
+2. Type **`git clone https://github.com/vberkaltun/mbedCore.git`** and run.
 
 After these steps, all dependencies will be downloaded to your current directory.
 
@@ -101,7 +101,7 @@ After these steps, all dependencies will be downloaded to your current directory
 
 1. Open a command prompt.
 2. Type **`mbed new THIS_IS_YOUR_APP_NAME`** and run.
-4. Create a **`main.cpp file`** in your root of the application. Open the file and add the following codes:
+4. Create a **`main.cpp file`** in the root of your application. Open the file and add the following codes:
 
 ```cpp
 #include "mbed.h"
