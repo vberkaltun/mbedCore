@@ -139,8 +139,8 @@ int main()
 | Tables         | Description  |
 | :------------- | :----------- |
 | `PROJECT_PATH` | The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**. |
-| `DEVELOPMENT_BOARD_NAME` |The development board name, for example: **`NUCLEO_F446RE`**. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application. |
-| `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For the full list of supported the devices, run the **`mbed target --supported`** in the root of the application. |
+| `DEVELOPMENT_BOARD_NAME` |The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](Configs-Mbed-CLI) section. |
+| `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For more information, check out the [Configs (Mbed-CLI)](Configs-Mbed-CLI) section. |
 | `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The root path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
 | `ARM_PATH_EXEC_FILENAME` | The executable filepath of the ARM compiler, for example: **`${config:ARM_PATH}/bin/arm-none-eabi-gdb.exe`**. |
@@ -177,22 +177,18 @@ kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output
 "^error,msg="-environment-cd: Usage DIRECTORY""
 ```
 
-This error occurs when you use Unicode in your project path. The only workaround is to not include Unicode in your path. For more information, check out the [Working directory and debug mode](#Resources).
+This error occurs when you use Unicode in your project path. The only workaround is to not include Unicode in your path. For more information, check out the [Working directory and debug mode (11)](#Resources).
 
 ### Configs (Mbed-CLI)
 
 You can check out the mbed configurations of your applications with the given commands. Before to running each of them, open a command prompt and redirect your command promt to the your application path with the **`cd YOUR_FULL_APPLICATION_PATH`** command. Then, run each of them one-by-one:
 
 | Command        | Description |
-| :------------- | -------:|
-| GNU Arm Embedded Toolchain | `arm-none-eabi-gcc --version` |
-| OpenOCD | `openocd --version` |
-| Git | `git --version`|
-| Python 2 | `python --version` |
-| STMicroelectronics STlink Tools | `st-flash --version` |
-| Mbed-CLI | `mbed --version` |
-| ST-LINK USB driver | `NA` |
-| Visual Studio Code | `code --version` |
+| :------------- | :-----------|
+| `mbed toolchain --supported` | Shows all supported toolchains by MbedOS. |
+| `mbed target --supported` | Shows all supported development boards by MbedOS. |
+| `mbed export --supported ides` | Shows all supported IDE by MbedOS. |
+| `mbed config --list` | Shows the configured settings for the current project. |
 
 ## Resources
 
