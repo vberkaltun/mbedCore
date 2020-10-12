@@ -88,7 +88,7 @@ Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load F
 
 ## Project Setup
 
-The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project. Then, you can easily disconnect your machine from the internet.
+The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project. Then, you can easily disconnect your machine from the internet and work on your project locally.
 
 ### Automatic Setup
 
@@ -119,7 +119,7 @@ int main()
 }
 ```
 
-4. Open **`mbed_app.json`** in the root of the application and replace it with the following content:
+4. Open **`mbed_app.json`** in the root of your application and replace it with the following content:
 
 ```json
 {
