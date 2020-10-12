@@ -17,6 +17,8 @@ The intended audience for this page will know what to adjust to get another type
   * [Manual Setup](#Manual-Setup)
 - [Post-requisite Setup](#Post-requisite-Setup)
 - [Compile And Test](#Compile-And-Test)
+- [Troubleshooting](#Troubleshooting)
+- [Resources](#Resources)
 
 ## Pre-requisite Setup
 
@@ -147,3 +149,17 @@ int main()
 ## Compile And Test
 
 Press **`F5`** to build the code and **`F6`** to program the target device (don't forget to connect your development board). If all went well, the on-board LED should now be blinking, sometimes slow, sometimes fast.
+
+## Troubleshooting
+
+## Resources
+
+1. [Exporting to Makefile fails to build on Windows](https://github.com/ARMmbed/mbed-os/issues/6335)
+2. [Questions › Mbed-CLI export Simplicity Studio](https://os.mbed.com/questions/83006/Mbed-CLI-export-Simplicity-Studio/)
+3. [Handbook › Exporting to GCC ARM Embedded](https://os.mbed.com/handbook/Exporting-to-GCC-ARM-Embedded)
+4. [Docs › Build tools › Third-party build tools › Exporting](https://os.mbed.com/docs/mbed-os/v6.3/build-tools/third-party-build-tools.html#exporting-from-arm-mbed-cli)
+5. [Docs › Tools › Developing: Mbed CLI › Installation and setup › After installation - configuring Mbed CLI](https://os.mbed.com/docs/mbed-os/v5.12/tools/after-installation-configuring-mbed-cli.html)
+6. [Docs › Build tools › Third-party build tools › Exporting](https://os.mbed.com/docs/mbed-os/v6.3/build-tools/third-party-build-tools.html)
+7. [Docs › Tutorials › Debugging › Visual Studio Code](https://os.mbed.com/docs/mbed-os/v5.12/tutorials/visual-studio-code.html)
+8. [Docs › Tools › Debugging › Setting up a local debug toolchain](https://os.mbed.com/docs/mbed-os/v5.12/tools/setting-up-a-local-debug-toolchain.html)
+9. [DISCO_F413ZH debugging with OpenOCD and Visual Studio Code](https://gist.github.com/janjongboom/51f2edbee8c965741465fa5feefe4cf1)
