@@ -18,15 +18,16 @@ The intended audience for this page will know what to adjust to get another type
 - [Post-requisite Setup](#Post-requisite-Setup)
 - [Compile And Test](#Compile-And-Test)
 - [Troubleshooting](#Troubleshooting)
-  * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-(GDBDebugger))
-  * [Configs (Mbed-CLI)](#Configs-(Mbed-CLI))
+  * [Version Check](#Version-Check)
+  * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-GDBDebugger)
+  * [Configs (Mbed-CLI)](#Configs-Mbed-CLI)
 - [Resources](#Resources)
 
 ## Pre-requisite Setup
 
 The following software is needed. Before all installations, create the folder `C:\VSARM` and then start the installations:
 
-| Tables         | Version | Installation Path | Description |
+| Software       | Version | Installation Path | Description |
 | :------------- | -------:| -----------------:| -----------:|
 | [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) | v8.2.1 | `C:\VSARM\armgcc` | Download the Windows 32-bit installer for Windows 7 and later. |
 | [OpenOCD](https://freddiechopin.info/en/download/category/4-openocd) | v0.10.0 | `C:\VSARM\openocd` | `NA` |
@@ -154,15 +155,44 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 
 ## Troubleshooting
 
+### Version Check
+
+If you already have an installed version of the required software, you can check out the versions of them with the given commands. Open a command prompt and run each of them one-by-one:
+
+| Software       | Command |
+| :------------- | -------:|
+| GNU Arm Embedded Toolchain | `arm-none-eabi-gcc --version` |
+| OpenOCD | `openocd --version` |
+| Git | `git --version`|
+| Python 2 | `python --version` |
+| STMicroelectronics STlink Tools | `st-flash --version` |
+| Mbed-CLI | `mbed --version` |
+| ST-LINK USB driver | `NA` |
+| Visual Studio Code | `code --version` |
+
 ### Usage Directory Error (GDBDebugger)
 
 ```
-kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output:  "^error,msg="-environment-cd: Usage DIRECTORY""
+kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output:    
+"^error,msg="-environment-cd: Usage DIRECTORY""
 ```
 
 This error occurs when you use Unicode in your project path. The only workaround is to not include Unicode in your path. For more information, check out the [Working directory and debug mode](#Resources).
 
 ### Configs (Mbed-CLI)
+
+You can check out the mbed configurations of your applications with the given commands. Before to running each of them, open a command prompt and redirect your command promt to the your application path with the **`cd YOUR_FULL_APPLICATION_PATH`** command. Then, run each of them one-by-one:
+
+| Command        | Description |
+| :------------- | -------:|
+| GNU Arm Embedded Toolchain | `arm-none-eabi-gcc --version` |
+| OpenOCD | `openocd --version` |
+| Git | `git --version`|
+| Python 2 | `python --version` |
+| STMicroelectronics STlink Tools | `st-flash --version` |
+| Mbed-CLI | `mbed --version` |
+| ST-LINK USB driver | `NA` |
+| Visual Studio Code | `code --version` |
 
 ## Resources
 
