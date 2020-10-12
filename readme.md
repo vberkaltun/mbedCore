@@ -139,10 +139,10 @@ int main()
 | `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The root path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
 | `ARM_PATH_EXEC_FILENAME` | The executable filepath of the ARM compiler, for example: **`${config:ARM_PATH}/bin/arm-none-eabi-gdb.exe`**. |
-| `OPENOCD_PATH` | The root path of OpenOCD compiler, for example: **`C:/VSARM/openocd`**. |
-| `OPENOCD_EXEC_FILENAME` | The executable filepath of OpenOCD compiler, for example: **`${config:OPENOCD_PATH}/bin/openocd.exe`**. |
-| `OPENOCD_CONFIG_FILENAME` | The config filepath of OpenOCD compiler, for example: **`${config:OPENOCD_PATH}/scripts/board/st_nucleo_f4.cfg`**. |
-| `OPENOCD_INTERFACE_FILENAME` | The interface filepath of OpenOCD compiler, for example: **`${config:OPENOCD_PATH}/scripts/interface/stlink-v2-1.cfg`**. |
+| `OPENOCD_PATH` | The root path of the OpenOCD compiler, for example: **`C:/VSARM/openocd`**. |
+| `OPENOCD_EXEC_FILENAME` | The executable filepath of the OpenOCD compiler, for example: **`${config:OPENOCD_PATH}/bin/openocd.exe`**. |
+| `OPENOCD_CONFIG_FILENAME` | The config filepath of the OpenOCD compiler, for example: **`${config:OPENOCD_PATH}/scripts/board/st_nucleo_f4.cfg`**. |
+| `OPENOCD_INTERFACE_FILENAME` | The interface filepath of the OpenOCD compiler, for example: **`${config:OPENOCD_PATH}/scripts/interface/stlink-v2-1.cfg`**. |
 
 ## Compile And Test
 
