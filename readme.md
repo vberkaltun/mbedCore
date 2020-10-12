@@ -163,3 +163,21 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 7. [Docs › Tutorials › Debugging › Visual Studio Code](https://os.mbed.com/docs/mbed-os/v5.12/tutorials/visual-studio-code.html)
 8. [Docs › Tools › Debugging › Setting up a local debug toolchain](https://os.mbed.com/docs/mbed-os/v5.12/tools/setting-up-a-local-debug-toolchain.html)
 9. [DISCO_F413ZH debugging with OpenOCD and Visual Studio Code](https://gist.github.com/janjongboom/51f2edbee8c965741465fa5feefe4cf1)
+
+## License
+
+```
+Copyright 2020 Berk Altun 
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
