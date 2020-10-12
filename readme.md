@@ -182,7 +182,7 @@ This error occurs when you use Unicode in your project path. The only workaround
 
 ### Configs (Mbed-CLI)
 
-You can check out the mbed configurations of your applications with the given commands. Before to running each of them, open a command prompt and redirect your command promt to the your application path with the **`cd YOUR_FULL_APPLICATION_PATH`** command. Then, run each of them one-by-one:
+You can check out the MbedOS configurations of your application with the given commands. Before running each of them, open a command prompt and redirect your command prompt to your application path with the **`cd YOUR_FULL_APPLICATION_PATH`** command. Then, run each of them one-by-one:
 
 | Command        | Description |
 | :------------- | :-----------|
@@ -208,7 +208,7 @@ You can check out the mbed configurations of your applications with the given co
 ## License
 
 ```
-Copyright 2020 Berk Altun 
+Copyright 2020 Berk Altun, on behalf of Hukseflux
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
