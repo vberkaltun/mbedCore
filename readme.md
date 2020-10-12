@@ -26,15 +26,15 @@ The intended audience for this page will know what to adjust to get another type
 
 ## Pre-requisite Setup
 
-The following software is needed. Before all installations, create the folder `C:\VSARM` and then start the installations:
+The following software is needed. Before all installations, create the folder `C:/VSARM` and then start the installations:
 
 | Software       | Version | Installation Path | Description |
 | :------------- | :-------| :-----------------| :-----------|
-| [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) | v8.2.1 | `C:\VSARM\armgcc` | Download the Windows 32-bit installer for Windows 7 and later. |
-| [OpenOCD](https://freddiechopin.info/en/download/category/4-openocd) | v0.10.0 | `C:\VSARM\openocd` | `NA` |
-| [Git](https://git-scm.com/download/win) | v2.28.0 | `C:\VSARM\git` | `NA` |
-| [Python 2](https://www.python.org/downloads/windows/) | v2.7.18 | `C:\VSARM\python27` | `NA` |
-| [STMicroelectronics STlink Tools](https://github.com/stlink-org/stlink/releases/tag/v1.6.1) | v1.6.1 | `C:\VSARM\stlink` | Download the binaries. |
+| [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) | v8.2.1 | `C:/VSARM/armgcc` | Download the Windows 32-bit installer for Windows 7 and later. |
+| [OpenOCD](https://freddiechopin.info/en/download/category/4-openocd) | v0.10.0 | `C:/VSARM/openocd` | `NA` |
+| [Git](https://git-scm.com/download/win) | v2.28.0 | `C:/VSARM/git` | `NA` |
+| [Python 2](https://www.python.org/downloads/windows/) | v2.7.18 | `C:/VSARM/python27` | `NA` |
+| [STMicroelectronics STlink Tools](https://github.com/stlink-org/stlink/releases/tag/v1.6.1) | v1.6.1 | `C:/VSARM/stlink` | Download the binaries. |
 | [Mbed-CLI](https://pypi.org/project/mbed-cli/#:~:text=Mbed%20CLI%20is%20a%20Python,to%20install%20Mercurial%20and%20Git.) | v1.10.4 | `NA` | Run `pip install mbed-cli` in command prompt. |
 | [ST-LINK USB driver](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html) | v2.0.1 | `NA` | `NA` |
 | [Visual Studio Code](https://code.visualstudio.com/) | v1.50.0 | `NA` |  Download the system installer, not the user installer. |
@@ -47,9 +47,9 @@ The following software is needed. Before all installations, create the folder `C
 4. Under the **System variables** section, scroll down and highlight the **Path** variable. Click the **Edit** button.
 5. In the Edit screen, click **New** and add the path to:
 
-    - `C:\VSARM\stlink\bin`
-    - `C:\VSARM\openocd\bin`
-    - `C:\VSARM\armcc\bin`
+    - `C:/VSARM/stlink/bin`
+    - `C:/VSARM/openocd/bin`
+    - `C:/VSARM/armcc/bin`
 
 ### Configuration of Visual Studio Code
 
@@ -64,7 +64,7 @@ The following software is needed. Before all installations, create the folder `C
 ```json
 // Place your key bindings in this file to override the defaults
 {
-    "cortex-debug.armToolchainPath": "${env:VSARM}\\armcc\\bin\\"
+    "cortex-debug.armToolchainPath": "${env:VSARM}/armcc/bin/"
 }
 ```
 
@@ -134,11 +134,11 @@ int main()
 
 5. Create a **`.vscode`** folder in the root of your application and then create these three files in this folder:
 
-    - `.vscode\launch.json`
-    - `.vscode\settings.json`
-    - `.vscode\tasks.json`
+    - `.vscode/launch.json`
+    - `.vscode/settings.json`
+    - `.vscode/tasks.json`
     
-6. Add the following content to the **`.vscode\launch.json`** file:
+6. Add the following content to the **`.vscode/launch.json`** file:
 
 ```json
 {
@@ -186,7 +186,7 @@ int main()
 }
 ```
 
-7. Add the following content to the **`.vscode\settings.json`** file:
+7. Add the following content to the **`.vscode/settings.json`** file:
 
 ```json
 // Place your settings in this file to overwrite default and user settings.
@@ -215,7 +215,7 @@ int main()
 }
 ```
 
-8. Add the following content to the **`.vscode\tasks.json`** file:
+8. Add the following content to the **`.vscode/tasks.json`** file:
 
 ```json
 {
@@ -307,7 +307,7 @@ int main()
     
 ## Post-requisite Setup
 
-1. Open the **`.vscode\settings.json`** file in the application folder.
+1. Open the **`.vscode/settings.json`** file in the application folder.
 2. Update the values of given parameters based on your software installations:
 
 | Tables         | Description  |
