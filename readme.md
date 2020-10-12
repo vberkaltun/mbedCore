@@ -161,7 +161,7 @@ Press **`F5`** to build the code and **`F6`** to program the target device (don'
 If you already have an installed version of the required software, you can check out the versions of them with the given commands. Open a command prompt and run each of them one-by-one:
 
 | Software       | Command |
-| :------------- | :-------|
+| :------------- | ------: |
 | GNU Arm Embedded Toolchain | `arm-none-eabi-gcc --version` |
 | OpenOCD | `openocd --version` |
 | Git | `git --version`|
