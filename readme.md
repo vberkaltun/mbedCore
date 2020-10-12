@@ -22,6 +22,7 @@ The intended audience for this page will know what to adjust to get another type
   * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-GDBDebugger)
   * [Configs (Mbed-CLI)](#Configs-Mbed-CLI)
 - [Resources](#Resources)
+- [License](#License)
 
 ## Pre-requisite Setup
 
