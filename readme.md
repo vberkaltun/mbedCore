@@ -68,7 +68,7 @@ The following software is needed. Before all installations, create the folder `C
 }
 ```
 
-Next, add keyboard shortcuts to the **`Compile Firmware (Debug)`** and **`Load Firmware (Debug)`** commands. Press **`F1`** and type **`Open Keyboard Shortcuts (JSON)`**. Open the keyboard shortcuts .JSON file and add the following codes:
+4. Press **`F1`** and type **`Open Keyboard Shortcuts (JSON)`**. Open the keyboard shortcuts .JSON file and add the following keyboard shortcut codes:
 
 ```json
 // Place your key bindings in this file to override the defaults
