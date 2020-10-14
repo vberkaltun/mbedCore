@@ -64,6 +64,16 @@
             ]
         },
         {
+            "label": "Clean Firmware (Debug)",
+            "type": "shell",
+            "command": "Remove-Item -Recurse -Force ${config:COMPILE_DEBUG_PATH}",
+        },
+        {
+            "label": "Clean Firmware (Release)",
+            "type": "shell",
+            "command": "Remove-Item -Recurse -Force ${config:COMPILE_RELEASE_PATH}",
+        },
+        {
             "label": "Open Serial Monitor",
             "type": "shell",
             "command": "mbed sterm -b ${config:DEVELOPMENT_BOARD_BAUDRATE}",
