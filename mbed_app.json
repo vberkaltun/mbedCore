@@ -1,5 +1,8 @@
 {
-    "requires": ["bare-metal"],
+    "requires": [
+        "bare-metal",
+        "rtos-api"
+    ],
     "target_overrides": {
         "*": {
             "target.c_lib": "small"
