@@ -64,7 +64,7 @@
             },
             "problemMatcher": [],
             "dependsOn": [
-                "Make Debug Firmware"
+                "Compile Firmware (Debug)"
             ]
         },
         {
@@ -80,7 +80,7 @@
             },
             "problemMatcher": [],
             "dependsOn": [
-                "Make Release Firmware"
+                "Compile Firmware (Release)"
             ]
         }
     ]
