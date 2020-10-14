@@ -7,9 +7,6 @@
             "label": "Compile Firmware (Debug)",
             "type": "shell",
             "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile debug",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            }, 
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -31,13 +28,6 @@
             "label": "Compile Firmware (Release)",
             "type": "shell",
             "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile release",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            }, 
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
             "problemMatcher": {
                "owner": "cpp",
                "fileLocation": ["relative", "${workspaceFolder}"],
@@ -55,9 +45,6 @@
             "label": "Load Firmware (Debug)",
             "type": "shell",
             "command": "st-flash --reset write ${config:COMPILE_DEBUG_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            },
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -71,13 +58,6 @@
             "label": "Load Firmware (Release)",
             "type": "shell",
             "command": "st-flash --reset write ${config:COMPILE_RELEASE_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            },
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
             "problemMatcher": [],
             "dependsOn": [
                 "Compile Firmware (Release)"
@@ -87,10 +67,6 @@
             "label": "Open Serial Monitor",
             "type": "shell",
             "command": "mbed sterm -b ${config:DEVELOPMENT_BOARD_BAUDRATE}",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            }
         }
     ]
 }
