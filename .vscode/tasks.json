@@ -59,7 +59,7 @@
                 "cwd": "${workspaceRoot}"
             },
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": [],
@@ -75,13 +75,22 @@
                 "cwd": "${workspaceRoot}"
             },
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": [],
             "dependsOn": [
                 "Compile Firmware (Release)"
             ]
+        },
+        {
+            "label": "Open Serial Monitor",
+            "type": "shell",
+            "command": "mbed sterm -b ${config:DEVELOPMENT_BOARD_BAUDRATE}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         }
     ]
 }

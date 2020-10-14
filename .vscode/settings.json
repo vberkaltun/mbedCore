@@ -7,6 +7,7 @@
     "PROJECT_PATH": "C:/Users/Dekimo/Documents/GitHub/mbedCore",
     "PROJECT_NAME": "${workspaceFolderBasename}",
 
+    "DEVELOPMENT_BOARD_BAUDRATE": "115200",
     "DEVELOPMENT_BOARD_NAME": "NUCLEO_F446RE",
     "DEVELOPMENT_TOOLCHAIN": "GCC_ARM",
     
