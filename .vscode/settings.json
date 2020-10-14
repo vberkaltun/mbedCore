@@ -22,4 +22,9 @@
     "OPENOCD_EXEC_FILENAME": "${config:OPENOCD_PATH}/bin/openocd.exe",
     "OPENOCD_CONFIG_FILENAME": "${config:OPENOCD_PATH}/scripts/board/st_nucleo_f4.cfg",
     "OPENOCD_INTERFACE_FILENAME": "${config:OPENOCD_PATH}/scripts/interface/stlink-v2-1.cfg",
+    
+    "files.exclude": {
+        "**/BUILD": true,
+        "**/mbed-os": true
+    },
 }
