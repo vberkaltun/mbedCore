@@ -384,7 +384,7 @@ You can check out the MbedOS configurations of your application with the given c
 
 ### Hotfix for The Linux File Formats
 
-If you have got some restrictions for the Linux data types in your machine, you can fix this problem by using the PowerShell commands located in the root path. This problem especially occurs if you would like to push or fetch anything in your TortoiseSVN repository. The given data types are the most common data types for this problem:
+If you have got some restrictions to work around with the Linux data types in your machine, you can fix this problem by using the PowerShell commands located in the root path. This problem especially occurs if you would like to push or fetch anything in your TortoiseSVN repository. The given data types are the most common data types for this problem:
 
 - `.gitattributes`
 - `.gitignore`
