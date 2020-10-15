@@ -13,7 +13,7 @@ The intended audience for this page will know what to adjust to get another type
   * [Environment Variables](#Environment-Variables)
   * [Configuration of Visual Studio Code](#Configuration-of-Visual-Studio-Code)
 - [Project Setup](#Project-Setup)
-  * [Automatic Setup: Github](#Automatic-Setup-Github)
+  * [Automatic Setup: GitHub](#Automatic-Setup-GitHub)
   * [Automatic Setup: Hukseflux Terminal Server](#Automatic-Setup-Hukseflux-Terminal-Server)
   * [Manual Setup](#Manual-Setup)
 - [Post-requisite Setup](#Post-requisite-Setup)
@@ -22,14 +22,14 @@ The intended audience for this page will know what to adjust to get another type
   * [Version Check](#Version-Check)
   * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-GDBDebugger)
   * [Configs (Mbed-CLI)](#Configs-Mbed-CLI)
-  * [PowerShell Hotfix for The Linux File Formats](#PowerShell-Hotfix-for-The-Linux-File-Formats)
-  * [Extracting The mbed-os.zip File to The Folder](#Extracting-The-mbed-os-zip-File-to-The-Folder)
+  * [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats)
+  * [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-os-zip-File)
 - [Resources](#Resources)
 - [License](#License)
 
 ## Pre-requisite Setup
 
-The following software is needed. Before all installations, create the folder `C:/VSARM` and then start the installations:
+The following software is needed. Before all installations, create the folder **`C:/VSARM`** and then start the installations:
 
 | Software       | Version | Installation Path | Description |
 | :------------- | :-------| :-----------------| :-----------|
@@ -91,9 +91,9 @@ The following software is needed. Before all installations, create the folder `C
 
 ## Project Setup
 
-The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your machine for the current project. Then, you can easily disconnect your machine from the internet and work on your project locally.
+The project can be set up in two different ways: automatic (GitHub and Hukseflux Terminal Server) and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your machine for the current project. Then, you can easily disconnect your machine from the internet and work on your project locally.
 
-### Automatic Setup: Github
+### Automatic Setup: GitHub
 
 1. Open a command prompt.
 2. Type **`git clone https://github.com/vberkaltun/mbedCore.git`** and run.
@@ -101,6 +101,16 @@ The project can be set up in two different ways: automatic and manual. In both w
 After these steps, all dependencies will be downloaded to your current directory.
 
 ### Automatic Setup: Hukseflux Terminal Server
+
+1. Open your Hukseflux Terminal Server.
+2. Redirect the **`sing_mbed_template`** project path. If you dont know the full path, get help from your administrations.
+3. Copy the root path of the project file.
+4. Paste it to the path you would like to work on your local machine. After these steps, you may have to check out these two topics:
+
+    - The [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats) topic in the [Troubleshooting](#Troubleshooting) section
+    - The [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-os-zip-File) topic in the [Troubleshooting](#Troubleshooting) section
+
+After these steps, all dependencies will be downloaded to your current directory.
 
 ### Manual Setup
 
@@ -326,8 +336,8 @@ int main()
 | :------------- | :----------- |
 | `PROJECT_PATH` | The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**. |
 | `DEVELOPMENT_BOARD_BAUDRATE` | The baud rate of the serial communication port, for example: **`115200`**. |
-| `DEVELOPMENT_BOARD_NAME` | The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
-| `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
+| `DEVELOPMENT_BOARD_NAME` | The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) topic in the [Troubleshooting](#Troubleshooting) section. |
+| `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) topic in the [Troubleshooting](#Troubleshooting) section. |
 | `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The root path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
 | `ARM_PATH_EXEC_FILENAME` | The executable filepath of the ARM compiler, for example: **`${config:ARM_PATH}/bin/arm-none-eabi-gdb.exe`**. |
@@ -389,7 +399,7 @@ If you have got some restrictions for the Linux data types in your machine, you 
 
 The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
 
-### PowerShell Hotfix for The Linux File Formats
+### Hotfix for The Linux File Formats
 
 If you have got some restrictions for the Linux data types in your machine, you can fix this problem by using the PowerShell commands located in the root path. This problem especially occurs if you would like to push or fetch anything in your TortoiseSVN repository. The given data types are the most common data types for this problem:
 
@@ -401,7 +411,7 @@ If you have got some restrictions for the Linux data types in your machine, you 
 
 The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
 
-### Extracting The mbed-os.zip File to The Folder
+### Extracting The 'mbed-os.zip' File
 
 ## Resources
 
