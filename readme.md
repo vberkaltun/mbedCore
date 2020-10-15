@@ -102,15 +102,10 @@ After these steps, all dependencies will be downloaded to your current directory
 
 ### Automatic Setup: Hukseflux Terminal Server
 
-1. Open your Hukseflux Terminal Server by the **`Windows Remote Desktop Connection`** tool.
-2. Open a **`File Explorer`** and redirect to the **`sing_mbed_template`** project path. If you don't know the full path, get a consult from your administration. Then copy all project content or just project folder.
-3. Open your machine and redirect to the path you would like to copy the all project content. Copy all content in this folder.
-4. Paste it to the path you would like to work on your local machine. After all these steps, you may have to check out these two topics:
+The Hukseflux Terminal Server includes all the project templates that you may need for the MbedOS + VS Code developments. In case of this automatic setup option, please get in touch with your administration to find out how to download **`sing_mbed_template`** project path. After all these steps, you may have to check out these two topics as well:
 
-    - The [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats) topic in the [Troubleshooting](#Troubleshooting) section
-    - The [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-oszip-File) topic in the [Troubleshooting](#Troubleshooting) section
-
-After these steps, all dependencies will be downloaded to your current directory.
+- The [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats) topic in the [Troubleshooting](#Troubleshooting) section
+- The [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-oszip-File) topic in the [Troubleshooting](#Troubleshooting) section
 
 ### Manual Setup
 
@@ -400,6 +395,10 @@ If you have got some restrictions for the Linux data types in your machine, you 
 The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
 
 ### Extracting The 'mbed-os.zip' File
+
+If you have used the **Hukseflux Terminal Server** for the installation, you will find out a **`mbed-os.zip`** file in the root path of the project. This ZIP file includes all MbedOS related libraries and configurations.
+
+After the installation of the project files to your machine, you may have to extract this folder to the same path with the **`mbed-os`** name. After that, you can easily delete the **`mbed-os.zip`** file from the root path of the project.
 
 ## Resources
 
