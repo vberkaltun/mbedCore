@@ -108,7 +108,7 @@ After these steps, all dependencies will be downloaded to your current directory
 4. Paste it to the path you would like to work on your local machine. After these steps, you may have to check out these two topics:
 
     - The [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats) topic in the [Troubleshooting](#Troubleshooting) section
-    - The [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-os-zip-File) topic in the [Troubleshooting](#Troubleshooting) section
+    - The [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-oszip-File) topic in the [Troubleshooting](#Troubleshooting) section
 
 After these steps, all dependencies will be downloaded to your current directory.
 
