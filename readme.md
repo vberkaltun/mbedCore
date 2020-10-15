@@ -23,7 +23,7 @@ The intended audience for this page will know what to adjust to get another type
   * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-GDBDebugger)
   * [Configs (Mbed-CLI)](#Configs-Mbed-CLI)
   * [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats)
-  * [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-os-zip-File)
+  * [Extracting The 'mbed-os.zip' File](#Extracting-The--mbed-os--zip-File)
 - [Resources](#Resources)
 - [License](#License)
 
@@ -386,18 +386,6 @@ You can check out the MbedOS configurations of your application with the given c
 | `mbed target --supported` | Shows all supported development boards by MbedOS. |
 | `mbed export --supported ides` | Shows all supported IDE by MbedOS. |
 | `mbed config --list` | Shows the configured settings for the current project. |
-
-### PowerShell Hotfix for The Linux File Formats
-
-If you have got some restrictions for the Linux data types in your machine, you can fix this problem by using the PowerShell commands located in the root path. This problem especially occurs if you would like to push or fetch anything in your TortoiseSVN repository. The given data types are the most common data types for this problem:
-
-- `.gitattributes`
-- `.gitignore`
-- `.gitmodules`
-- `.mbed`
-- `.mbedignore`
-
-The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
 
 ### Hotfix for The Linux File Formats
 
