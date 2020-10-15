@@ -82,7 +82,7 @@ The following software is needed. Before all installations, create the folder `C
         "key": "f6",
         "command": "workbench.action.tasks.runTask",
         "args": "Load Firmware (Debug)"
-    }    
+    }
 ]
 ```
 
@@ -311,7 +311,7 @@ int main()
     ]
 }
 ```
-    
+
 ## Post-requisite Setup
 
 1. Open the **`.vscode/settings.json`** file in the application folder.
@@ -355,7 +355,7 @@ If you already have an installed version of the required software, you can check
 ### Usage Directory Error (GDBDebugger)
 
 ```
-kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output:    
+kdevelop(4806)/kdevelop (gdb debugger) GDBDebugger::GDB::processLine: GDB output:
 "^error,msg="-environment-cd: Usage DIRECTORY""
 ```
 
