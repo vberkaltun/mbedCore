@@ -103,9 +103,9 @@ After these steps, all dependencies will be downloaded to your current directory
 ### Automatic Setup: Hukseflux Terminal Server
 
 1. Open your Hukseflux Terminal Server.
-2. Redirect the **`sing_mbed_template`** project path. If you dont know the full path, get help from your administrations.
-3. Copy the root path of the project file.
-4. Paste it to the path you would like to work on your local machine. After these steps, you may have to check out these two topics:
+2. Redirect the **`sing_mbed_template`** project path. If you dont know the full path, get a consult from your administration.
+3. Copy all content in the project folder (or right-click on the project folder and select copy).
+4. Paste it to the path you would like to work on your local machine ( right-click somewhere on the folder and select paste). After all these steps, you may have to check out these two topics:
 
     - The [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats) topic in the [Troubleshooting](#Troubleshooting) section
     - The [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-oszip-File) topic in the [Troubleshooting](#Troubleshooting) section
