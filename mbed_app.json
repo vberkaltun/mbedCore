@@ -1,7 +1,6 @@
 {
     "requires": [
-        "bare-metal",
-        "rtos-api"
+        "bare-metal"
     ],
     "target_overrides": {
         "*": {
