@@ -82,7 +82,7 @@ The following software is needed. Before all installations, create the folder `C
         "key": "f6",
         "command": "workbench.action.tasks.runTask",
         "args": "Load Firmware (Debug)"
-    }
+    }    
 ]
 ```
 
@@ -198,11 +198,12 @@ int main()
     "PROJECT_PATH": "C:/Users/Dekimo/Documents/GitHub/mbedCore",
     "PROJECT_NAME": "${workspaceFolderBasename}",
 
+    "DEVELOPMENT_BOARD_BAUDRATE": "115200",
     "DEVELOPMENT_BOARD_NAME": "NUCLEO_F446RE",
     "DEVELOPMENT_TOOLCHAIN": "GCC_ARM",
     
     "COMPILE_MEMORY_ADDRESS": "0x08000000",
-    "COMPILE_RELEASE_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM",
+    "COMPILE_RELEASE_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM-RELEASE",
     "COMPILE_DEBUG_PATH": "${config:PROJECT_PATH}/BUILD/${config:DEVELOPMENT_BOARD_NAME}/GCC_ARM-DEBUG",
 
     "ARM_PATH": "C:/VSARM/armgcc",
@@ -212,6 +213,11 @@ int main()
     "OPENOCD_EXEC_FILENAME": "${config:OPENOCD_PATH}/bin/openocd.exe",
     "OPENOCD_CONFIG_FILENAME": "${config:OPENOCD_PATH}/scripts/board/st_nucleo_f4.cfg",
     "OPENOCD_INTERFACE_FILENAME": "${config:OPENOCD_PATH}/scripts/interface/stlink-v2-1.cfg",
+    
+    "files.exclude": {
+        "**/BUILD": true,
+        "**/mbed-os": true
+    },
 }
 ```
 
@@ -225,81 +231,82 @@ int main()
             "label": "Compile Firmware (Debug)",
             "type": "shell",
             "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile debug",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            }, 
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": {
-               "owner": "cpp",
-               "fileLocation": ["relative", "${workspaceFolder}"],
-               "pattern": {
-                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                   "file": 1,
-                   "line": 2,
-                   "column": 3,
-                   "severity": 4,
-                   "message": 5
-               }
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
             }
         },
         {
             "label": "Compile Firmware (Release)",
             "type": "shell",
             "command": "mbed compile --target ${config:DEVELOPMENT_BOARD_NAME} --toolchain ${config:DEVELOPMENT_TOOLCHAIN} --profile release",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            }, 
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
             "problemMatcher": {
-               "owner": "cpp",
-               "fileLocation": ["relative", "${workspaceFolder}"],
-               "pattern": {
-                   "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                   "file": 1,
-                   "line": 2,
-                   "column": 3,
-                   "severity": 4,
-                   "message": 5
-               }
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
             }
         },
         {
             "label": "Load Firmware (Debug)",
             "type": "shell",
             "command": "st-flash --reset write ${config:COMPILE_DEBUG_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            },
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": [],
             "dependsOn": [
-                "Make Debug Firmware"
+                "Compile Firmware (Debug)"
             ]
         },
         {
             "label": "Load Firmware (Release)",
             "type": "shell",
             "command": "st-flash --reset write ${config:COMPILE_RELEASE_PATH}/${config:PROJECT_NAME}.bin ${config:COMPILE_MEMORY_ADDRESS}",
-            "options": {
-                "cwd": "${workspaceRoot}"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
             "problemMatcher": [],
             "dependsOn": [
-                "Make Release Firmware"
+                "Compile Firmware (Release)"
             ]
+        },
+        {
+            "label": "Clean Firmware (Debug)",
+            "type": "shell",
+            "command": "Remove-Item -Recurse -Force ${config:COMPILE_DEBUG_PATH}",
+        },
+        {
+            "label": "Clean Firmware (Release)",
+            "type": "shell",
+            "command": "Remove-Item -Recurse -Force ${config:COMPILE_RELEASE_PATH}",
+        },
+        {
+            "label": "Open Serial Monitor",
+            "type": "shell",
+            "command": "mbed sterm -b ${config:DEVELOPMENT_BOARD_BAUDRATE}",
         }
     ]
 }
@@ -313,7 +320,8 @@ int main()
 | Tables         | Description  |
 | :------------- | :----------- |
 | `PROJECT_PATH` | The root path of your application, for example **`C:/Users/Dekimo/Documents/GitHub/mbedCore`**. |
-| `DEVELOPMENT_BOARD_NAME` |The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
+| `DEVELOPMENT_BOARD_BAUDRATE` | The baud rate of the serial communication port, for example: **`115200`**. |
+| `DEVELOPMENT_BOARD_NAME` | The development board name, for example: **`NUCLEO_F446RE`**. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
 | `DEVELOPMENT_TOOLCHAIN` | The compiler toolchain, for example: **`GCC_ARM`**. This documentation is totaly based on **`GCC_ARM`** compiler. For more information, check out the [Configs (Mbed-CLI)](#Configs-Mbed-CLI) section. |
 | `COMPILE_MEMORY_ADDRESS` | The starting address of the firmware file, for example: **`0x08000000`**. |
 | `ARM_PATH` | The root path of the ARM compiler, for example: **`C:/VSARM/armgcc`**. |
