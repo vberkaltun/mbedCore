@@ -23,7 +23,7 @@ The intended audience for this page will know what to adjust to get another type
   * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-GDBDebugger)
   * [Configs (Mbed-CLI)](#Configs-Mbed-CLI)
   * [Hotfix for The Linux File Formats](#Hotfix-for-The-Linux-File-Formats)
-  * [Extracting The 'mbed-os.zip' File](#Extracting-The--mbed-os--zip-File)
+  * [Extracting The 'mbed-os.zip' File](#Extracting-The-mbed-oszip-File)
 - [Resources](#Resources)
 - [License](#License)
 
