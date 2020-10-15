@@ -392,7 +392,7 @@ If you have got some restrictions for the Linux data types in your machine, you 
 - `.mbed`
 - `.mbedignore`
 
-The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
+The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around or the development, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
 
 ### Extracting The 'mbed-os.zip' File
 
