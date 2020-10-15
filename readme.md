@@ -396,9 +396,7 @@ The solution is changing Linux bases data types to the Windows supported data ty
 
 ### Extracting The 'mbed-os.zip' File
 
-If you have used the **Hukseflux Terminal Server** for the installation, you will find out a **`mbed-os.zip`** file in the root path of the project. This ZIP file includes all MbedOS related libraries and configurations.
-
-After the installation of the project files to your machine, you may have to extract this folder to the same path with the **`mbed-os`** name. After that, you can easily delete the **`mbed-os.zip`** file from the root path of the project.
+If you have used the **Hukseflux Terminal Server** for the installation, you will find out a **`mbed-os.zip`** file in the root path of the project. This ZIP file includes all MbedOS related libraries and configurations that you need. After the installation, you may have to extract this folder to the root path of your project folder with the **`mbed-os`** name. Then, you can easily delete the **`mbed-os.zip`** file from the root path of the project.
 
 ## Resources
 
