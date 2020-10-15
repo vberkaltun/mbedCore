@@ -21,6 +21,7 @@ The intended audience for this page will know what to adjust to get another type
   * [Version Check](#Version-Check)
   * [Usage Directory Error (GDBDebugger)](#Usage-Directory-Error-GDBDebugger)
   * [Configs (Mbed-CLI)](#Configs-Mbed-CLI)
+  * [PowerShell Hotfix for The Linuc File Formats](#PowerShell-Hotfix-for-The-Linuc-File Formats)
 - [Resources](#Resources)
 - [License](#License)
 
@@ -88,7 +89,7 @@ The following software is needed. Before all installations, create the folder `C
 
 ## Project Setup
 
-The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your pc for the current project. Then, you can easily disconnect your machine from the internet and work on your project locally.
+The project can be set up in two different ways: automatic and manual. In both ways, your machine has to be connected to the internet at least one time. In this period, all dependencies are collected in your machine for the current project. Then, you can easily disconnect your machine from the internet and work on your project locally.
 
 ### Automatic Setup
 
@@ -371,6 +372,18 @@ You can check out the MbedOS configurations of your application with the given c
 | `mbed target --supported` | Shows all supported development boards by MbedOS. |
 | `mbed export --supported ides` | Shows all supported IDE by MbedOS. |
 | `mbed config --list` | Shows the configured settings for the current project. |
+
+### PowerShell Hotfix for The Linuc File Formats
+
+If you have got some restrictions for the Linux data types in your machine, you can fix this problem by using the PowerShell commands located in the root path. This problem especially occurs if you would like to push or fetch anything in your TortoiseSVN repository. The given data types are the most common data types for this problem:
+
+- `.gitattributes`
+- `.gitignore`
+- `.gitmodules`
+- `.mbed`
+- `.mbedignore`
+
+The solution is changing Linux bases data types to the Windows supported data types or the other way around. Before pushing anything to the repository, you may have to run the **`mbed_prefix_add.ps1`** PowerShell command. Then, a 'hukseflux' will be added all your relevant data types. For the opposite way around, just run **`mbed_prefix_remove.ps1`** in the root path. You can also change this prefix name by editing the **`.PS1`** file with an editor.
 
 ## Resources
 
