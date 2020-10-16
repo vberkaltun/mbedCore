@@ -27,4 +27,8 @@
         "**/BUILD": true,
         "**/mbed-os": true
     },
+    
+    "editor.rulers": [
+        80
+    ]
 }
