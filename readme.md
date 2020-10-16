@@ -205,7 +205,7 @@ int main()
     "C_Cpp.intelliSenseEngine": "Tag Parser",
     "git.ignoreLimitWarning": true,
     
-    "PROJECT_PATH": "C:/Users/Dekimo/Documents/GitHub/mbedCore",
+    "PROJECT_PATH": "C:/Users/Dekimo/Documents/GitHub/Hukseflux",
     "PROJECT_NAME": "${workspaceFolderBasename}",
 
     "DEVELOPMENT_BOARD_BAUDRATE": "115200",
@@ -228,6 +228,17 @@ int main()
         "**/BUILD": true,
         "**/mbed-os": true
     },
+    
+    "editor.rulers": [
+        52,
+        80,
+        120,
+        160
+    ],
+
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#FFFFFF1A"
+    }
 }
 ```
 
